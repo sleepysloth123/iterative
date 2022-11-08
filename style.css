@@ -286,6 +286,16 @@ img.header{
     text-align: center;
 }
 
+#split-section{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+
+    align-items: center;
+    justify-content: center;
+    
+}
+
 .img-wrapper{
     width: 90%;
     display: grid;
