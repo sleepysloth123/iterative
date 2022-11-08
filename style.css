@@ -1,0 +1,379 @@
+/*
+RESET SETTINGS */
+
+/* set border-box (so that css uses a
+more reasonable box model, and so it’s
+like every other platform) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+/* get rid of default margins which
+vary depending on browser anyway, just
+set it yourself later*/
+* {
+    margin: 0;
+}
+
+    /* media elements are replaced elements
+which have a width based on the media,
+so we prevent it from expanding beyond
+its container, and take up a row */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* make tables look like spreadsheets
+and less like a spaced-out grid */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:white;
+
+    display: grid;
+    grid-template-columns: 96vw;
+    grid-template-rows: 10vh 200vh;
+    justify-content: center;
+    justify-items: center;
+   
+
+
+    /* gets rid of horizontal scroll */
+    overflow-x: hidden;
+
+    line-height:150%;
+    font-weight:400;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+
+}
+
+p{
+    color:#53587e;
+    text-align: justify;
+    width: 90%;
+}
+
+/* nav text
+    */
+h1 {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+}
+    
+/* nav text
+    */
+nav {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/*
+    subheader
+    h2 bars on the sides of text referenced from https://www.trysmudford.com/blog/css-header-legend/ !
+*/
+h2 {
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+    align-items: center;
+    text-align: center;
+    grid-gap: 20px;
+    width: 100%;
+
+    color: rgb(128, 55, 197);
+    background: linear-gradient(to right, rgb(128, 55, 197), rgb(44, 133, 185), rgb(239, 181, 110));
+    background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+h2:before,
+h2:after {
+    content: '';
+    border-top: 2px solid white;
+}
+
+b{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(125, 168, 206);
+}
+
+b2{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(15, 42, 66);
+    text-transform: uppercase;
+}
+
+/*BIG HEADER*/
+h4{
+    font-size: 4rem;
+    line-height: 100%;
+
+    color: rgb(128, 55, 197);
+    background: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
+    background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+/*description text style*/
+h5{
+    font-size: 13px;
+    color:#6f6f6f;
+    font-weight: normal;
+}
+
+desc{
+    text-align: center;
+    color:#6f6f6f;
+    font-size: 15px;
+}
+
+
+a {
+    font-size: 1rem;
+    line-height: 100%;
+
+    color: rgb(36, 34, 95);
+    
+    text-align: center;
+    font-weight: bold;
+    vertical-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    text-decoration: none;
+
+            -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+}
+
+a::after, a::before{
+    text-decoration: none;
+}
+
+a:hover{
+    color:rgb(35, 94, 154);
+    cursor: pointer;
+}
+
+
+.navbar {
+  
+    grid-column: 1;
+    grid-row: 1;
+    position: fixed;
+    width: 96vw;
+    height:10vh;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    border-radius: 10px;
+
+    color: rgb(128, 55, 197);
+    background-image: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
+
+    z-index: 999;
+    -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+}
+
+.nav-text {
+    text-align: center;
+}
+
+
+.container{
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: -2px;
+    width: auto;
+    height: auto !important;  
+}
+
+.header{
+    padding:50px;
+    width: 100;
+    height: auto;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1.5fr .7fr;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px #e0e0e0;
+
+    margin-bottom: 20px;
+}
+
+#header-text{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+img.header{
+    grid-row: 1;
+    grid-column: 2;
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.content{
+    padding:50px;
+    width: 100;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px #e0e0e0;
+
+    margin-bottom: 20px;
+}
+
+.content-header{
+    width: 100%;
+    margin-top: -10px;
+    padding: 20px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+}
+
+#subsection{
+    width: 70%;
+    padding: 15px;
+    border-radius: 20px;
+    border: solid 2px #e0e0e0;
+    margin-top: 10px;
+    font-size: 13px;
+    color:#4e7a8e;
+    text-align: center;
+}
+
+.img-wrapper{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.wireframe-wrapper{
+    width: 90%;
+    max-height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#e0e0e0;
+    border-radius: 10px;
+    
+}
+
+.content-img{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px #e0e0e0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.figma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    text-decoration: none;
+    background: none;
+    border:none;
+
+    border-radius: 20px;
+
+    color: rgb(128, 55, 197);
+    background-image: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
+
+    z-index: 999;
+    -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+
+    cursor: pointer;
+}
+
+.figma:hover{
+    background-color: white;
+    border: solid 2px #e0e0e0;
+    
+    color: rgb(128, 55, 197);
+    background: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
+    background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        z-index: 999;
+    -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+
+}
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar-thumb:vertical {
+    background: rgb(216, 172, 83);
+    border-radius: 15px;
+    height: 50px;
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 7px;
+    background: rgb(255, 255, 255);
+}
